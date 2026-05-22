@@ -298,7 +298,7 @@ footer .spacer { flex: 1; }
   <section class="town-wrap">
     <div class="canvas-label tl"><div><span class="k">$</span> gitlawb node explorer</div><div><b>did:key:z6Mkicjkc95V…</b></div></div>
     <div class="canvas-label tr"><div><b id="label-count">…</b> of <b>2349</b> repos shown</div><div>click any building →</div></div>
-    <div class="canvas-label bl"><div>↗ <b>node</b> US · <b>node2</b> US · <b>node3</b> JP</div></div>
+    <div class="canvas-label bl"><div>↗ <b>node</b> US · <b>node2</b> US · <b>node3</b> JP</div><div><b id="ship-count">…</b> playground apps sailing · click to open</div></div>
     <div class="canvas-label br"><div>pkt <span class="k" id="pkt-count">0</span> · pinned to ipfs</div></div>
     <div class="zoom-ctrl">
       <button id="z-in" title="Zoom in">+</button>
@@ -356,6 +356,19 @@ footer .spacer { flex: 1; }
 /* island */
 .island-dark{fill:#1f2540}
 .island-mid{fill:#2d3556}
+
+/* ship interactivity */
+.app-ship{cursor:pointer;transition:filter 0.15s}
+.app-ship:hover{filter:brightness(1.45) drop-shadow(0 0 6px rgba(255,216,102,0.6))}
+.ship-name{
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 7px;
+  fill: #f0e6c8;
+  opacity: 0.7;
+  pointer-events: none;
+  letter-spacing: 0.5px;
+}
+.app-ship:hover .ship-name{opacity:1;fill:#ffd866}
 
 /* airplanes */
 .plane-body{fill:#d4d8e0}
@@ -939,80 +952,204 @@ footer .spacer { flex: 1; }
 <rect class="wave" x="447" y="1000" width="7" height="1"/>
 <rect class="wave" x="1235" y="1082" width="7" height="1"/>
 <g class="island">
-<polygon class="island-dark" points="198,690 246,690 238,694 206,694"/>
-<rect class="island-mid" x="213" y="686" width="2" height="4"/>
-<rect class="island-mid" x="218" y="683" width="2" height="7"/>
-<rect class="island-mid" x="223" y="685" width="2" height="5"/>
-<rect class="island-mid" x="228" y="687" width="2" height="3"/>
-<rect class="ship-light" x="219" y="684" width="1" height="1"/>
-<rect class="ship-light" x="224" y="686" width="1" height="1"/>
+<polygon class="island-dark" points="158,690 206,690 198,694 166,694"/>
+<rect class="island-mid" x="173" y="686" width="2" height="4"/>
+<rect class="island-mid" x="178" y="683" width="2" height="7"/>
+<rect class="island-mid" x="183" y="685" width="2" height="5"/>
+<rect class="island-mid" x="188" y="687" width="2" height="3"/>
+<rect class="ship-light" x="179" y="684" width="1" height="1"/>
+<rect class="ship-light" x="184" y="686" width="1" height="1"/>
 </g>
 <g class="island">
-<polygon class="island-dark" points="1618,700 1666,700 1658,704 1626,704"/>
-<rect class="island-mid" x="1633" y="696" width="2" height="4"/>
-<rect class="island-mid" x="1638" y="693" width="2" height="7"/>
-<rect class="island-mid" x="1643" y="695" width="2" height="5"/>
-<rect class="island-mid" x="1648" y="697" width="2" height="3"/>
-<rect class="ship-light" x="1639" y="694" width="1" height="1"/>
-<rect class="ship-light" x="1644" y="696" width="1" height="1"/>
+<polygon class="island-dark" points="1638,700 1686,700 1678,704 1646,704"/>
+<rect class="island-mid" x="1653" y="696" width="2" height="4"/>
+<rect class="island-mid" x="1658" y="693" width="2" height="7"/>
+<rect class="island-mid" x="1663" y="695" width="2" height="5"/>
+<rect class="island-mid" x="1668" y="697" width="2" height="3"/>
+<rect class="ship-light" x="1659" y="694" width="1" height="1"/>
+<rect class="ship-light" x="1664" y="696" width="1" height="1"/>
 </g>
-<g class="ship">
-<polygon class="ship-hull" points="1534,820 1586,820 1582,827 1538,827"/>
-<rect class="ship-deck" x="1538" y="817" width="40" height="3"/>
-<rect fill="#c47860" x="1540" y="812" width="7" height="5"/>
-<rect fill="#3da085" x="1548" y="812" width="7" height="5"/>
-<rect fill="#e8c462" x="1556" y="812" width="7" height="5"/>
-<rect fill="#7866c4" x="1564" y="812" width="7" height="5"/>
-<rect class="ship-cabin" x="1574" y="810" width="7" height="7"/>
-<rect class="ship-light" x="1575" y="811" width="1" height="1"/>
-<rect class="ship-light" x="1579" y="811" width="1" height="1"/>
-<rect fill="#2a2a30" x="1571" y="806" width="3" height="5"/>
-<rect fill="#1a1a20" x="1570" y="806" width="5" height="1"/>
+<g class="ship app-ship" data-sub="grave.gitlawb.app" data-slug="grave" data-author="@nix_Bitcoin" data-desc="Premium futuristic landing page for a Web3 + AI Agent project"><title>grave · @nix_Bitcoin · Premium futuristic landing page for a Web3 + AI Agent project</title>
+<polygon class="ship-hull" points="1634,800 1686,800 1682,807 1638,807"/>
+<rect class="ship-deck" x="1638" y="797" width="40" height="3"/>
+<rect fill="#c47860" x="1640" y="792" width="7" height="5"/>
+<rect fill="#3da085" x="1648" y="792" width="7" height="5"/>
+<rect fill="#e8c462" x="1656" y="792" width="7" height="5"/>
+<rect fill="#7866c4" x="1664" y="792" width="7" height="5"/>
+<rect class="ship-cabin" x="1674" y="790" width="7" height="7"/>
+<rect class="ship-light" x="1675" y="791" width="1" height="1"/>
+<rect class="ship-light" x="1679" y="791" width="1" height="1"/>
+<rect fill="#2a2a30" x="1671" y="786" width="3" height="5"/>
+<rect fill="#1a1a20" x="1670" y="786" width="5" height="1"/>
+<text class="ship-name" x="1660" y="780" text-anchor="middle">GRAVE</text>
 </g>
-<g class="ship">
-<polygon class="ship-hull" points="1468,1020 1492,1020 1490,1025 1470,1025"/>
-<line x1="1479" y1="1020" x2="1479" y2="1002" stroke="#d4c8a8" stroke-width="1"/>
-<polygon class="sail" points="1479,1002 1479,1018 1489,1018"/>
-<polygon class="sail-d" points="1479,1002 1471,1018 1479,1018"/>
-<rect class="ship-light" x="1488" y="1017" width="1" height="1"/>
+<g class="ship app-ship" data-sub="calculator-4all-5964.gitlawb.app" data-slug="calculator-4all-5964" data-author="@JFalsado48397" data-desc="Calculator app"><title>calculator-4all-5964 · @JFalsado48397 · Calculator app</title>
+<polygon class="ship-hull" points="1744,970 1796,970 1792,977 1748,977"/>
+<rect class="ship-deck" x="1748" y="967" width="40" height="3"/>
+<rect fill="#c47860" x="1750" y="962" width="7" height="5"/>
+<rect fill="#3da085" x="1758" y="962" width="7" height="5"/>
+<rect fill="#e8c462" x="1766" y="962" width="7" height="5"/>
+<rect fill="#7866c4" x="1774" y="962" width="7" height="5"/>
+<rect class="ship-cabin" x="1784" y="960" width="7" height="7"/>
+<rect class="ship-light" x="1785" y="961" width="1" height="1"/>
+<rect class="ship-light" x="1789" y="961" width="1" height="1"/>
+<rect fill="#2a2a30" x="1781" y="956" width="3" height="5"/>
+<rect fill="#1a1a20" x="1780" y="956" width="5" height="1"/>
+<text class="ship-name" x="1770" y="950" text-anchor="middle">CALCULATOR 4AL</text>
 </g>
-<g class="ship">
-<polygon class="ship-hull" points="268,940 292,940 290,945 270,945"/>
-<line x1="279" y1="940" x2="279" y2="922" stroke="#d4c8a8" stroke-width="1"/>
-<polygon class="sail" points="279,922 279,938 289,938"/>
-<polygon class="sail-d" points="279,922 271,938 279,938"/>
-<rect class="ship-light" x="288" y="937" width="1" height="1"/>
+<g class="ship app-ship" data-sub="calm-pos-1990.gitlawb.app" data-slug="calm-pos-1990" data-author="@JFalsado48397" data-desc="Architectural showcase site"><title>calm-pos-1990 · @JFalsado48397 · Architectural showcase site</title>
+<polygon class="ship-hull" points="1818,720 1842,720 1840,725 1820,725"/>
+<line x1="1829" y1="720" x2="1829" y2="702" stroke="#d4c8a8" stroke-width="1"/>
+<polygon class="sail" points="1829,702 1829,718 1839,718"/>
+<polygon class="sail-d" points="1829,702 1821,718 1829,718"/>
+<rect class="ship-light" x="1838" y="717" width="1" height="1"/>
 </g>
-<g class="ship">
-<polygon class="ship-hull" points="950,1230 970,1230 968,1235 952,1235"/>
-<rect class="ship-cabin" x="956" y="1224" width="8" height="6"/>
-<rect class="ship-light" x="957" y="1225" width="1" height="1"/>
-<rect class="ship-light" x="961" y="1225" width="1" height="1"/>
-<line x1="964" y1="1224" x2="964" y2="1216" stroke="#5a4028" stroke-width="1"/>
-<rect class="ship-light pulse" x="963" y="1215" width="2" height="2"/>
+<g class="ship app-ship" data-sub="barangay-service-2389.gitlawb.app" data-slug="barangay-service-2389" data-author="@JFalsado48397" data-desc="Barangay Service App"><title>barangay-service-2389 · @JFalsado48397 · Barangay Service App</title>
+<polygon class="ship-hull" points="1518,900 1542,900 1540,905 1520,905"/>
+<line x1="1529" y1="900" x2="1529" y2="882" stroke="#d4c8a8" stroke-width="1"/>
+<polygon class="sail" points="1529,882 1529,898 1539,898"/>
+<polygon class="sail-d" points="1529,882 1521,898 1529,898"/>
+<rect class="ship-light" x="1538" y="897" width="1" height="1"/>
 </g>
-<g class="ship">
-<ellipse cx="720" cy="1280" rx="14" ry="3" fill="#2a2a30"/>
-<rect class="ship-hull" x="717" y="1276" width="6" height="3"/>
-<line x1="720" y1="1276" x2="720" y2="1271" stroke="#5a5a60" stroke-width="1"/>
-<rect class="ship-light pulse" x="719" y="1269" width="2" height="2"/>
-<ellipse cx="717" cy="1283" rx="6" ry="0.8" fill="rgba(255,255,255,0.22)"/>
-<ellipse cx="724" cy="1284" rx="4" ry="0.6" fill="rgba(255,255,255,0.18)"/>
+<g class="ship app-ship" data-sub="electric-tracker-5086.gitlawb.app" data-slug="electric-tracker-5086" data-author="@JFalsado48397" data-desc="Electricity tracking dashboard"><title>electric-tracker-5086 · @JFalsado48397 · Electricity tracking dashboard</title>
+<polygon class="ship-hull" points="1668,1080 1692,1080 1690,1085 1670,1085"/>
+<line x1="1679" y1="1080" x2="1679" y2="1062" stroke="#d4c8a8" stroke-width="1"/>
+<polygon class="sail" points="1679,1062 1679,1078 1689,1078"/>
+<polygon class="sail-d" points="1679,1062 1671,1078 1679,1078"/>
+<rect class="ship-light" x="1688" y="1077" width="1" height="1"/>
 </g>
-<g class="ship">
-<polygon class="ship-hull" points="1288,1180 1312,1180 1310,1185 1290,1185"/>
-<line x1="1299" y1="1180" x2="1299" y2="1162" stroke="#d4c8a8" stroke-width="1"/>
-<polygon class="sail" points="1299,1162 1299,1178 1309,1178"/>
-<polygon class="sail-d" points="1299,1162 1291,1178 1299,1178"/>
-<rect class="ship-light" x="1308" y="1177" width="1" height="1"/>
+<g class="ship app-ship" data-sub="smart-bh-4896.gitlawb.app" data-slug="smart-bh-4896" data-author="@JFalsado48397" data-desc="Smart Boarding House Management App"><title>smart-bh-4896 · @JFalsado48397 · Smart Boarding House Management App</title>
+<polygon class="ship-hull" points="1840,1180 1860,1180 1858,1185 1842,1185"/>
+<rect class="ship-cabin" x="1846" y="1174" width="8" height="6"/>
+<rect class="ship-light" x="1847" y="1175" width="1" height="1"/>
+<rect class="ship-light" x="1851" y="1175" width="1" height="1"/>
+<line x1="1854" y1="1174" x2="1854" y2="1166" stroke="#5a4028" stroke-width="1"/>
+<rect class="ship-light pulse" x="1853" y="1165" width="2" height="2"/>
 </g>
-<g class="ship">
-<polygon class="ship-hull" points="440,1180 460,1180 458,1185 442,1185"/>
-<rect class="ship-cabin" x="446" y="1174" width="8" height="6"/>
-<rect class="ship-light" x="447" y="1175" width="1" height="1"/>
-<rect class="ship-light" x="451" y="1175" width="1" height="1"/>
-<line x1="454" y1="1174" x2="454" y2="1166" stroke="#5a4028" stroke-width="1"/>
-<rect class="ship-light pulse" x="453" y="1165" width="2" height="2"/>
+<g class="ship app-ship" data-sub="tourism-appphilippines-3797.gitlawb.app" data-slug="tourism-appphilippines-3797" data-author="@JFalsado48397" data-desc="Tourism App for the Philippines"><title>tourism-appphilippines-3797 · @JFalsado48397 · Tourism App for the Philippines</title>
+<polygon class="ship-hull" points="1518,1170 1542,1170 1540,1175 1520,1175"/>
+<line x1="1529" y1="1170" x2="1529" y2="1152" stroke="#d4c8a8" stroke-width="1"/>
+<polygon class="sail" points="1529,1152 1529,1168 1539,1168"/>
+<polygon class="sail-d" points="1529,1152 1521,1168 1529,1168"/>
+<rect class="ship-light" x="1538" y="1167" width="1" height="1"/>
+</g>
+<g class="ship app-ship" data-sub="clear-translator-7266.gitlawb.app" data-slug="clear-translator-7266" data-author="@JFalsado48397" data-desc="Multilingual translator"><title>clear-translator-7266 · @JFalsado48397 · Multilingual translator</title>
+<polygon class="ship-hull" points="194,830 246,830 242,837 198,837"/>
+<rect class="ship-deck" x="198" y="827" width="40" height="3"/>
+<rect fill="#c47860" x="200" y="822" width="7" height="5"/>
+<rect fill="#3da085" x="208" y="822" width="7" height="5"/>
+<rect fill="#e8c462" x="216" y="822" width="7" height="5"/>
+<rect fill="#7866c4" x="224" y="822" width="7" height="5"/>
+<rect class="ship-cabin" x="234" y="820" width="7" height="7"/>
+<rect class="ship-light" x="235" y="821" width="1" height="1"/>
+<rect class="ship-light" x="239" y="821" width="1" height="1"/>
+<rect fill="#2a2a30" x="231" y="816" width="3" height="5"/>
+<rect fill="#1a1a20" x="230" y="816" width="5" height="1"/>
+<text class="ship-name" x="220" y="810" text-anchor="middle">CLEAR TRANSLAT</text>
+</g>
+<g class="ship app-ship" data-sub="swift-river-5414.gitlawb.app" data-slug="swift-river-5414" data-author="@Fontecilla3376" data-desc="Game like brainly puzzle"><title>swift-river-5414 · @Fontecilla3376 · Game like brainly puzzle</title>
+<polygon class="ship-hull" points="98,720 122,720 120,725 100,725"/>
+<line x1="109" y1="720" x2="109" y2="702" stroke="#d4c8a8" stroke-width="1"/>
+<polygon class="sail" points="109,702 109,718 119,718"/>
+<polygon class="sail-d" points="109,702 101,718 109,718"/>
+<rect class="ship-light" x="118" y="717" width="1" height="1"/>
+</g>
+<g class="ship app-ship" data-sub="bold-fjord-2689.gitlawb.app" data-slug="bold-fjord-2689" data-author="@NFontecill24332" data-desc="Plant identifier"><title>bold-fjord-2689 · @NFontecill24332 · Plant identifier</title>
+<polygon class="ship-hull" points="88,920 112,920 110,925 90,925"/>
+<line x1="99" y1="920" x2="99" y2="902" stroke="#d4c8a8" stroke-width="1"/>
+<polygon class="sail" points="99,902 99,918 109,918"/>
+<polygon class="sail-d" points="99,902 91,918 99,918"/>
+<rect class="ship-light" x="108" y="917" width="1" height="1"/>
+</g>
+<g class="ship app-ship" data-sub="ai-assistant-6340.gitlawb.app" data-slug="ai-assistant-6340" data-author="@JFalsado48397" data-desc="AI Study Assistant App"><title>ai-assistant-6340 · @JFalsado48397 · AI Study Assistant App</title>
+<polygon class="ship-hull" points="200,1020 220,1020 218,1025 202,1025"/>
+<rect class="ship-cabin" x="206" y="1014" width="8" height="6"/>
+<rect class="ship-light" x="207" y="1015" width="1" height="1"/>
+<rect class="ship-light" x="211" y="1015" width="1" height="1"/>
+<line x1="214" y1="1014" x2="214" y2="1006" stroke="#5a4028" stroke-width="1"/>
+<rect class="ship-light pulse" x="213" y="1005" width="2" height="2"/>
+</g>
+<g class="ship app-ship" data-sub="calm-cliff-5223.gitlawb.app" data-slug="calm-cliff-5223" data-author="@SisilyF61534" data-desc="Portfolio site for kids on how to make a sandwich"><title>calm-cliff-5223 · @SisilyF61534 · Portfolio site for kids on how to make a sandwich</title>
+<polygon class="ship-hull" points="694,1230 746,1230 742,1237 698,1237"/>
+<rect class="ship-deck" x="698" y="1227" width="40" height="3"/>
+<rect fill="#c47860" x="700" y="1222" width="7" height="5"/>
+<rect fill="#3da085" x="708" y="1222" width="7" height="5"/>
+<rect fill="#e8c462" x="716" y="1222" width="7" height="5"/>
+<rect fill="#7866c4" x="724" y="1222" width="7" height="5"/>
+<rect class="ship-cabin" x="734" y="1220" width="7" height="7"/>
+<rect class="ship-light" x="735" y="1221" width="1" height="1"/>
+<rect class="ship-light" x="739" y="1221" width="1" height="1"/>
+<rect fill="#2a2a30" x="731" y="1216" width="3" height="5"/>
+<rect fill="#1a1a20" x="730" y="1216" width="5" height="1"/>
+<text class="ship-name" x="720" y="1210" text-anchor="middle">CALM CLIFF 522</text>
+</g>
+<g class="ship app-ship" data-sub="calm-pine-2971.gitlawb.app" data-slug="calm-pine-2971" data-author="@SisilyF61534" data-desc="Portfolio site for kids on how to be patient"><title>calm-pine-2971 · @SisilyF61534 · Portfolio site for kids on how to be patient</title>
+<polygon class="ship-hull" points="488,1190 512,1190 510,1195 490,1195"/>
+<line x1="499" y1="1190" x2="499" y2="1172" stroke="#d4c8a8" stroke-width="1"/>
+<polygon class="sail" points="499,1172 499,1188 509,1188"/>
+<polygon class="sail-d" points="499,1172 491,1188 499,1188"/>
+<rect class="ship-light" x="508" y="1187" width="1" height="1"/>
+</g>
+<g class="ship app-ship" data-sub="fresh-harbor-5851.gitlawb.app" data-slug="fresh-harbor-5851" data-author="@GadianGilda" data-desc="Simple solution game"><title>fresh-harbor-5851 · @GadianGilda · Simple solution game</title>
+<polygon class="ship-hull" points="970,1280 990,1280 988,1285 972,1285"/>
+<rect class="ship-cabin" x="976" y="1274" width="8" height="6"/>
+<rect class="ship-light" x="977" y="1275" width="1" height="1"/>
+<rect class="ship-light" x="981" y="1275" width="1" height="1"/>
+<line x1="984" y1="1274" x2="984" y2="1266" stroke="#5a4028" stroke-width="1"/>
+<rect class="ship-light pulse" x="983" y="1265" width="2" height="2"/>
+</g>
+<g class="ship app-ship" data-sub="bold-lattice-5959.gitlawb.app" data-slug="bold-lattice-5959" data-author="@Fontecilla3376" data-desc="App like music downloader"><title>bold-lattice-5959 · @Fontecilla3376 · App like music downloader</title>
+<polygon class="ship-hull" points="1138,1200 1162,1200 1160,1205 1140,1205"/>
+<line x1="1149" y1="1200" x2="1149" y2="1182" stroke="#d4c8a8" stroke-width="1"/>
+<polygon class="sail" points="1149,1182 1149,1198 1159,1198"/>
+<polygon class="sail-d" points="1149,1182 1141,1198 1149,1198"/>
+<rect class="ship-light" x="1158" y="1197" width="1" height="1"/>
+</g>
+<g class="ship app-ship" data-sub="swift-ember-4271.gitlawb.app" data-slug="swift-ember-4271" data-author="@Fontecilla3376" data-desc="A fishing game"><title>swift-ember-4271 · @Fontecilla3376 · A fishing game</title>
+<ellipse cx="850" cy="1320" rx="14" ry="3" fill="#2a2a30"/>
+<rect class="ship-hull" x="847" y="1316" width="6" height="3"/>
+<line x1="850" y1="1316" x2="850" y2="1311" stroke="#5a5a60" stroke-width="1"/>
+<rect class="ship-light pulse" x="849" y="1309" width="2" height="2"/>
+<ellipse cx="847" cy="1323" rx="6" ry="0.8" fill="rgba(255,255,255,0.22)"/>
+<ellipse cx="854" cy="1324" rx="4" ry="0.6" fill="rgba(255,255,255,0.18)"/>
+</g>
+<g class="ship app-ship" data-sub="shelter.gitlawb.app" data-slug="shelter" data-author="@NFontecill24332" data-desc="Animal Rescue Adventure Game"><title>shelter · @NFontecill24332 · Animal Rescue Adventure Game</title>
+<polygon class="ship-hull" points="1290,1280 1310,1280 1308,1285 1292,1285"/>
+<rect class="ship-cabin" x="1296" y="1274" width="8" height="6"/>
+<rect class="ship-light" x="1297" y="1275" width="1" height="1"/>
+<rect class="ship-light" x="1301" y="1275" width="1" height="1"/>
+<line x1="1304" y1="1274" x2="1304" y2="1266" stroke="#5a4028" stroke-width="1"/>
+<rect class="ship-light pulse" x="1303" y="1265" width="2" height="2"/>
+</g>
+<g class="ship app-ship" data-sub="tiny-fjord-2489.gitlawb.app" data-slug="tiny-fjord-2489" data-author="@GadianGilda" data-desc="A stick fighter game"><title>tiny-fjord-2489 · @GadianGilda · A stick fighter game</title>
+<polygon class="ship-hull" points="388,1290 412,1290 410,1295 390,1295"/>
+<line x1="399" y1="1290" x2="399" y2="1272" stroke="#d4c8a8" stroke-width="1"/>
+<polygon class="sail" points="399,1272 399,1288 409,1288"/>
+<polygon class="sail-d" points="399,1272 391,1288 399,1288"/>
+<rect class="ship-light" x="408" y="1287" width="1" height="1"/>
+</g>
+<g class="ship app-ship" data-sub="bbubble.gitlawb.app" data-slug="bbubble" data-author="@NFontecill24332" data-desc="Bubble physics toy"><title>bbubble · @NFontecill24332 · Bubble physics toy</title>
+<ellipse cx="1450" cy="1330" rx="14" ry="3" fill="#2a2a30"/>
+<rect class="ship-hull" x="1447" y="1326" width="6" height="3"/>
+<line x1="1450" y1="1326" x2="1450" y2="1321" stroke="#5a5a60" stroke-width="1"/>
+<rect class="ship-light pulse" x="1449" y="1319" width="2" height="2"/>
+<ellipse cx="1447" cy="1333" rx="6" ry="0.8" fill="rgba(255,255,255,0.22)"/>
+<ellipse cx="1454" cy="1334" rx="4" ry="0.6" fill="rgba(255,255,255,0.18)"/>
+</g>
+<g class="ship app-ship" data-sub="fit.gitlawb.app" data-slug="fit" data-author="@NFontecill24332" data-desc="Fitness tracker"><title>fit · @NFontecill24332 · Fitness tracker</title>
+<polygon class="ship-hull" points="590,1280 610,1280 608,1285 592,1285"/>
+<rect class="ship-cabin" x="596" y="1274" width="8" height="6"/>
+<rect class="ship-light" x="597" y="1275" width="1" height="1"/>
+<rect class="ship-light" x="601" y="1275" width="1" height="1"/>
+<line x1="604" y1="1274" x2="604" y2="1266" stroke="#5a4028" stroke-width="1"/>
+<rect class="ship-light pulse" x="603" y="1265" width="2" height="2"/>
+</g>
+<g class="ship app-ship" data-sub="toka.gitlawb.app" data-slug="toka" data-author="@NFontecill24332" data-desc="Toka game"><title>toka · @NFontecill24332 · Toka game</title>
+<polygon class="ship-hull" points="1068,1330 1092,1330 1090,1335 1070,1335"/>
+<line x1="1079" y1="1330" x2="1079" y2="1312" stroke="#d4c8a8" stroke-width="1"/>
+<polygon class="sail" points="1079,1312 1079,1328 1089,1328"/>
+<polygon class="sail-d" points="1079,1312 1071,1328 1079,1328"/>
+<rect class="ship-light" x="1088" y="1327" width="1" height="1"/>
 </g>
 <polygon class="gnd-grass-t" points="950.0,280.0 1750.0,680.0 950.0,1080.0 150.0,680.0"/>
 <polygon class="gnd-grass-l" points="150,680 950,1080 950,1092 150,692" opacity=".6"/>
@@ -21784,6 +21921,7 @@ footer .spacer { flex: 1; }
 <div class="panel-title">network</div>
 <p class="empty-state" style="font-size:11px;">3 federated peer ships hover above the town. Dotted beams = gossipsub propagation. Glowing dots traveling between buildings = RefUpdateEvent packets in flight. Pulsing windows = repos with active main-branch pushes.</p>
 <p class="empty-state" style="font-size:11px;margin-top:8px;">Each colored neighborhood is a single DID owner. Hand-detailed buildings are the flagship repos; smaller surrounding ones are user-generated playground sessions and CI-generated fixtures — every tile is a real published repo.</p>
+<p class="empty-state" style="font-size:11px;margin-top:8px;">⚓ <b>Ships sailing in the ocean are live playground apps</b> from <a href="https://playground.gitlawb.com/apps" target="_blank" style="color:var(--accent)">playground.gitlawb.com/apps</a>. Click any ship to open the app in a new tab.</p>
 </div>
 </div>
 
@@ -22385,6 +22523,32 @@ setTimeout(spawnToast, 1200);
   const labelEl = document.getElementById('label-count');
   if (headerEl) headerEl.textContent = total.toLocaleString();
   if (labelEl) labelEl.textContent = total.toLocaleString();
+})();
+
+// Wire up playground-app ships — click opens app subdomain, hover-tooltip via <title>
+(function() {
+  const ships = document.querySelectorAll('.app-ship');
+  const shipCountEl = document.getElementById('ship-count');
+  if (shipCountEl) shipCountEl.textContent = ships.length;
+  ships.forEach(s => {
+    s.addEventListener('click', e => {
+      const sub = s.getAttribute('data-sub');
+      const slug = s.getAttribute('data-slug');
+      if (sub) {
+        // Open the app in a new tab
+        window.open('https://' + sub, '_blank', 'noopener');
+        // Also surface a toast confirming what was opened
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.innerHTML = '<span class="t-tag">launch</span><span><b>' + slug + '</b> opening in new tab</span>';
+        const stream = document.getElementById('toast-stream');
+        if (stream) {
+          stream.insertBefore(toast, stream.firstChild);
+          setTimeout(() => toast.remove(), 4500);
+        }
+      }
+    });
+  });
 })();
 
 // Live repo count
